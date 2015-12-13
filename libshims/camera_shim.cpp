@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-extern "C" void RIL_register_socket() {}
+#include <stdlib.h>
 
-/* status_t Parcel::writeString16 */
-extern "C" int _ZN7android6Parcel13writeString16EPKDsm();
-extern "C" int _ZN7android6Parcel13writeString16EPKtm() {
-    return _ZN7android6Parcel13writeString16EPKDsm();
+extern "C" int _ZN7android5Fence4waitEi(int);
+extern "C" int _ZN7android5Fence4waitEj(unsigned int timeout) {
+    return _ZN7android5Fence4waitEi(timeout);
 }
